@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Island+Moments&family=Lato:wght@300;400;700;900&family=Libre+Baskerville:ital@1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+/* reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* reset */
+
+/* colors */
+:root {
+   --redButtonCl: #e3001b;
+   --navCl: #100103;
+   --mainColor: #ffffff;
+   --smGray: #eeeeee;
+   --lightSmGray: #f5f5f5;
+   --smDark: #717171;
+   --lightDark: #e6e6e6;
+   --smoothGray: #f7f7f7;
+   --gray: #555555;
+   --darkGray: #999999;
+   --scrollBarCl: #dddddd;
+   --placeholderCl: #c1c1c1;
+}
+/* colors */
+
+html {
+   font-family: 'Roboto', sans-serif;
+}
+
+/* global classes */
+
+.side_padding {
+   padding: 0 150px;
+}
+
+.side_padding_one {
+   padding: 0 180px;
+}
+
+.side_padding_tow {
+   padding: 0 100px;
+}
+
+.top_padding {
+   padding: 60px 0;
+}
+
+.top_padding_tow {
+   padding: 80px 0;
+}
+
+.top_padding_thrre {
+   padding: 100px 0;
+}
+
+/* global classes */

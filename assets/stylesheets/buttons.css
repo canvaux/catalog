@@ -1,0 +1,10 @@
+.navbar_buttons {
+   border: 1px solid red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--redButtonCl);
+   border-radius: 30px;
+   padding: 0.5rem 1.3rem;
+   cursor: pointer;
+}
