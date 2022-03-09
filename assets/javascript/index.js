@@ -3,6 +3,7 @@
 const searchTabsCards = document.querySelectorAll('.search_by_year_div');
 const engineCliELm = document.querySelectorAll('.engine_cli');
 const tabsContent = document.querySelectorAll('.tabs_content');
+const tabsContnetELm = document.querySelectorAll('.tabs_options');
 
 // removing active class
 const removeActiveCl = function () {
@@ -55,3 +56,16 @@ searchTabsCards.forEach((el) => {
       }
    });
 });
+
+const removetabElmActive = function () {
+   tabsContnetELm.forEach((el) => {
+      el.classList.remove('tech_active');
+   });
+};
+
+for (let i = 0; i < tabsContnetELm.length; i++) {
+   tabsContnetELm[i].addEventListener('click', function () {
+      removetabElmActive();
+      this.classList.add('tech_active');
+   });
+}

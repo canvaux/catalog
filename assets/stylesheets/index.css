@@ -171,11 +171,16 @@
    width: 100%;
    height: 450px;
    border: 1px dotted var(--smDark);
-   overflow-x: hidden;
+   overflow-x: scroll;
+}
+
+.result_div_inner {
+   width: 1200px;
 }
 
 .result_div::-webkit-scrollbar {
    width: 10px;
+   height: 10px;
 }
 
 /* Handle */
@@ -216,3 +221,13 @@
    margin-bottom: 0;
 }
 /* SEARCH BY PART NUMBER / INTERCHANGE */
+
+/* SEARCH BY BEARINGS SIZE */
+.search_by_bearings select {
+   width: 100%;
+   padding: 0.5rem;
+   border-radius: 5px;
+   font-size: 20px;
+   font-weight: 600;
+}
+/* SEARCH BY BEARINGS SIZE */

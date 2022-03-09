@@ -1,0 +1,83 @@
+/* SUBARU 2007-2015 2457CC 2.5 Ltr 99.500 X 79.000MM */
+.subaru_heading_div {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   padding: 1.2rem 1.4rem;
+}
+.subaru_heading_div img {
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   left: 0;
+}
+.subaru_heading_div h3 {
+   font-size: 30px;
+   margin-bottom: 0;
+}
+/* SUBARU 2007-2015 2457CC 2.5 Ltr 99.500 X 79.000MM */
+
+/* tech data tabs */
+.tech_data_tabs h2 {
+   color: var(--tabSM);
+   font-size: 30px;
+}
+.tech_active {
+   color: var(--navCl) !important;
+}
+.tabs_options {
+   cursor: pointer;
+}
+/* tech data tabs */
+
+/* tabs container section */
+.tabs_container_inner_div {
+   width: 100%;
+   /* height: 800px; */
+   border: 1.5px dotted var(--smDark);
+
+   overflow-y: hidden;
+}
+
+.tabs_content_main {
+   width: 1589px;
+}
+
+.tabs_container_inner_div::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+
+/* Handle */
+.tabs_container_inner_div::-webkit-scrollbar-thumb {
+   background: var(--scrollBarCl);
+   border-radius: 10px;
+}
+
+/* Handle on hover */
+.tabs_container_inner_div::-webkit-scrollbar-thumb:hover {
+   background: var(--smDark);
+}
+
+.tabs_container_content_div {
+   width: 150px;
+   padding: 1rem;
+   border: 1.5px dotted var(--smDark);
+   height: 150px;
+}
+
+.tabs_container_content_second_div {
+   width: 150px;
+   height: 290px;
+   padding: 1rem;
+   border: 1.5px dotted var(--smDark);
+}
+
+.tabs_container_first_content_div {
+   width: 380px;
+}
+.tabs_container_content_div h3 {
+   color: var(--redButtonCl);
+   font-size: 20px;
+}
+/* tabs container section */
