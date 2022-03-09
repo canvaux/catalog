@@ -4,6 +4,7 @@ const searchTabsCards = document.querySelectorAll('.search_by_year_div');
 const engineCliELm = document.querySelectorAll('.engine_cli');
 const tabsContent = document.querySelectorAll('.tabs_content');
 const tabsContnetELm = document.querySelectorAll('.tabs_options');
+const tabsContainerSectionELm = document.querySelectorAll('.tabs_container_section');
 
 // removing active class
 const removeActiveCl = function () {
@@ -67,5 +68,14 @@ for (let i = 0; i < tabsContnetELm.length; i++) {
    tabsContnetELm[i].addEventListener('click', function () {
       removetabElmActive();
       this.classList.add('tech_active');
+      const target = tabsContnetELm[i].getAttribute('data-target');
+
+      tabsContainerSectionELm.forEach((el) => {
+         if (el.id === target) {
+            el.style.display = 'block';
+         } else {
+            el.style.display = 'none';
+         }
+      });
    });
 }

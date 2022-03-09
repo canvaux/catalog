@@ -20,7 +20,7 @@
 /* tech data tabs */
 .tech_data_tabs h2 {
    color: var(--tabSM);
-   font-size: 30px;
+   font-size: 28px;
 }
 .tech_active {
    color: var(--navCl) !important;
@@ -80,4 +80,38 @@
    color: var(--redButtonCl);
    font-size: 20px;
 }
+
+.engin_tab_container h3 {
+   font-size: 40px;
+}
+
+.engin_tab_container h4 {
+   font-size: 21px;
+}
+
+.refrece_table_div {
+   width: 100%;
+}
+
+.border_top {
+   border-top: 1.5px dotted var(--smDark);
+}
+.refrece_table_div .row {
+   border: 1.5px dotted var(--smDark);
+   border-top: none;
+}
+
+.refrece_table_div .row h5 {
+   margin-bottom: 0;
+   color: var(--redButtonCl);
+}
+
+.refrece_table_div .row h4 {
+   font-size: 15px;
+}
+
+.refrece_table_div .table_border {
+   border-left: 1.5px dotted var(--smDark);
+}
+
 /* tabs container section */
