@@ -207,6 +207,7 @@
 .image_prev_innner_div {
    height: 50px;
    width: auto;
+   cursor: pointer;
 }
 
 .img_active {
