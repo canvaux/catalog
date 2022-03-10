@@ -1,41 +1,22 @@
-<div class="col-12 col-sm-12 col-md-8 ps-5">
-                        <div class="part_number_inner_div">
-                            <h3>RESULT</h3>
-                            <img src="./assets/images/line.png" class="img-fluid" alt="">
-                        </div>
+<div class="col-12 col-sm-12 col-md-3">
+                                <div class="selection_div">
+                                    <div class="selection_header_div d-flex justify-content-around align-items-center">
+                                        <h3 class="mb-0">FUEL TYPE </h3>
+                                        <img src="./assets/images/icon_engine.png" class="img-fluid" alt="">
+                                    </div>
 
-                        <div class="result_table mt-3">
-                            <div class="row">
-                                <div class="col-4 p-4 border_doted">
-                                    <img src="./assets/images/Frame.png" class="img-fluid" alt="">
-                                    <h3 class="mb-0">SET</h3>
-                                </div>
-                                <div class="col-1 border_doted ">
-                                    <div>
+                                    <div class="selection_div_content mt-3">
+
+                                        <div class="selection_inner_div">
+                                            <p>Diesel</p>
+                                        </div>
+                                        <div class="selection_inner_div dark_sm_section">
+                                            <p>Petrol</p>
+                                        </div>
+                                        <div class="selection_inner_div dark_section">
+                                            <p class="text-white">Gas</p>
+                                        </div>
 
                                     </div>
                                 </div>
-                                <img src="./assets/images/camera.png" class="img-fluid" alt="">
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
-                                <div class="col-1 border_doted"></div>
                             </div>
-                        </div>
-                    </div>
-
-
-                    .result_table .row {
-   border: 1px dotted var(--smDark);
-}
-.result_table .row .border_doted {
-   border: 1px dotted var(--smDark);
-}
-.result_table h3 {
-   color: var(--redButtonCl);
-   margin-top: 0.5rem;
-   font-size: 20px;
-}
