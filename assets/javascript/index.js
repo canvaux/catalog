@@ -114,17 +114,20 @@ prevImage.forEach((el) => {
 
         if (el.id === prevImageId) {
             prevSmCardImage = document.querySelector(`.prevImageSm${el.id}`);
+            let perent = prevSmCardImage.parentNode;
 
-            prevSmCardImage.style.border = '1px solid red';
+            perent.style.border = '1px solid #E3001B';
             prevSmCardImage.classList.add('prveImageActiveElem');
+            // perent.style.backgroundColor = '#E3001B';
         }
     });
 });
 
 const grabActiveElm = function () {
-    const prevAllImagesDiv = document.querySelectorAll('.prevImage_sm_elm');
+    const prevAllImagesDiv = document.querySelectorAll('.image_prev_innner_div');
     prevAllImagesDiv.forEach((el) => {
         el.style.border = 'none';
+        el.style.backgroundColor = 'transparent';
     });
 };
 
@@ -136,15 +139,16 @@ prevImageCloseBtn.addEventListener('click', function () {
 
 const changeimageData = function () {
     let prevImageAC = document.querySelector(`.prevImageSm${targetElmId}`);
+    let perent = prevImageAC.parentNode;
 
-    if (prevImageAC) {
+    if (prevImageAC && perent) {
         let src = prevImageAC.getAttribute('src');
-        console.log(src);
 
         bigPrevImageElm.src = src;
 
-        prevImageAC.style.border = '1px solid red';
+        perent.style.border = '1px solid #E3001B';
         prevImageAC.classList.add('prveImageActiveElem');
+        // perent.style.backgroundColor = '#E3001B';
     } else {
         return;
     }
@@ -182,12 +186,14 @@ smCardElm.forEach((el) => {
     el.addEventListener('click', function () {
         grabActiveElm();
         let src = this.getAttribute('src');
+        let perent = this.parentNode;
 
         bigPrevImageElm.src = src;
         targetElmId = this.id;
 
-        this.style.border = '1px solid red';
+        perent.style.border = '1px solid #E3001B';
         this.classList.add('prveImageActiveElem');
+        // perent.style.border = '1px solid #E3001B';
     });
 });
 
