@@ -1,0 +1,103 @@
+@media (max-width: 1600px) {
+    .side_padding {
+        padding: 0 70px;
+    }
+    .navbar_second_inner_div {
+        padding: 0.7rem 1.2rem;
+    }
+    .search_by_year_div h5 {
+        font-size: 17px;
+    }
+    .search_by_make h1 {
+        font-size: 28px;
+    }
+    .selection_inner_div p {
+        font-size: 14px;
+    }
+    .selection_header_div h4 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .selection_inner_div p {
+        font-size: 12px;
+    }
+    .selection_header_div h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .raion_nav {
+        display: none !important;
+    }
+    .navbar_second_inner_div p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .selection_header_div h3 {
+        font-size: 22px;
+    }
+    .selection_inner_div p {
+        font-size: 16px;
+    }
+    .navbar {
+        display: none;
+    }
+    .top_navbar_div {
+        display: block;
+    }
+    .second_navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .selection_inner_div p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 760px) {
+    .selection_inner_div p {
+        font-size: 16px;
+    }
+    .side_padding {
+        padding: 0 30px;
+    }
+    .selection_header_div h4 {
+        font-size: 14px;
+    }
+    .engine_content_div {
+        padding: 0.6rem 0;
+        padding-left: 0.6rem;
+    }
+    .for_adition_resutls h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .selection_inner_div p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .for_adition_resutls h2 {
+        font-size: 12px;
+    }
+    .search_by_make h1 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer p {
+        text-align: center;
+        margin-bottom: 0.5rem !important;
+    }
+}

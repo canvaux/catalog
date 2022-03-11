@@ -2,58 +2,60 @@
 
 /* reset */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /* reset */
 
 /* colors */
 :root {
-   --redButtonCl: #e3001b;
-   --navCl: #100103;
-   --mainColor: #ffffff;
-   --smGray: #eeeeee;
-   --lightSmGray: #f5f5f5;
-   --smDark: #717171;
-   --lightDark: #e6e6e6;
-   --smoothGray: #f7f7f7;
-   --gray: #555555;
-   --darkGray: #999999;
-   --scrollBarCl: #dddddd;
-   --placeholderCl: #c1c1c1;
-   --tabSM: #c4c4c4;
+    --redButtonCl: #e3001b;
+    --navCl: #100103;
+    --mainColor: #ffffff;
+    --smGray: #eeeeee;
+    --lightSmGray: #f5f5f5;
+    --smDark: #717171;
+    --lightDark: #e6e6e6;
+    --smoothGray: #f7f7f7;
+    --gray: #555555;
+    --darkGray: #999999;
+    --scrollBarCl: #dddddd;
+    --placeholderCl: #c1c1c1;
+    --tabSM: #c4c4c4;
+    --secondNavbarColor: #1a1a1a;
+    --smnavcl: #bdbdbd;
 }
 /* colors */
 
 html {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* global classes */
 
 .side_padding {
-   padding: 0 150px;
+    padding: 0 150px;
 }
 
 .side_padding_one {
-   padding: 0 180px;
+    padding: 0 180px;
 }
 
 .side_padding_tow {
-   padding: 0 100px;
+    padding: 0 100px;
 }
 
 .top_padding {
-   padding: 60px 0;
+    padding: 60px 0;
 }
 
 .top_padding_tow {
-   padding: 80px 0;
+    padding: 80px 0;
 }
 
 .top_padding_thrre {
-   padding: 100px 0;
+    padding: 100px 0;
 }
 
 /* global classes */

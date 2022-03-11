@@ -213,6 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--scrollBarCl);
 }
 .image_prev_innner_div img {
     width: auto;

@@ -1,74 +1,168 @@
 /* navbar */
 .navbar_selectuion_div p {
-   color: var(--smDark);
+    color: var(--smDark);
 }
 .navbar_dropdown_box {
-   width: 180px;
-   height: 40px;
-   padding: 0.5rem;
-   border: 1px solid var(--smDark);
+    width: 180px;
+    height: 40px;
+    padding: 0.5rem;
+    border: 1px solid var(--smDark);
 }
 .navbar_question_div i {
-   font-size: 20px;
+    font-size: 20px;
 }
 .navbar_dropdown_box {
-   color: var(--smDark);
+    color: var(--smDark);
 }
 .search_bar_div {
-   display: flex;
-   width: 250px;
-   height: 40px;
-   border: 1px solid var(--lightDark);
-   border-radius: 4px;
-   overflow: hidden;
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border: 1px solid var(--lightDark);
+    border-radius: 4px;
+    overflow: hidden;
 }
 .search_bar_div input {
-   width: 100%;
-   height: 100%;
-   border: none;
-   background-color: var(--smoothGray);
-   outline: none;
-   padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--smoothGray);
+    outline: none;
+    padding: 1rem;
 }
 .search_bar_div .search_bar_icon_div {
-   width: 60px;
-   height: 100%;
-   background-color: var(--redButtonCl);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
+    width: 60px;
+    height: 100%;
+    background-color: var(--redButtonCl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .second_navbar {
-   background-color: var(--navCl);
+    background-color: var(--navCl);
 }
 .navbar_second_inner_div {
-   padding: 0.7rem 2rem;
-   cursor: pointer;
-   position: relative;
-   z-index: 10;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar_second_inner_div::before {
-   content: '';
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   border-right: 2px solid var(--mainColor);
-   border-left: 4px solid var(--mainColor);
-   transform: skewX(-26deg);
-   z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid var(--mainColor);
+    border-left: 4px solid var(--mainColor);
+    transform: skewX(-26deg);
+    z-index: -1;
 }
 
 .navbar_active::before {
-   background-color: var(--redButtonCl);
+    background-color: var(--redButtonCl);
 }
 .navbar_last_div::before {
-   border-right: 6px solid var(--mainColor);
+    border-right: 6px solid var(--mainColor);
 }
 .navbar_second_inner_div p {
-   font-size: 18px;
+    font-size: 18px;
 }
 /* navbar */
+
+/* second navbar */
+.top_navbar_div {
+    width: 100%;
+    padding: 1rem;
+    display: none;
+}
+.second_navbar_brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second_navbar_brand i {
+    cursor: pointer;
+}
+
+.navbar_second_innercontent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--secondNavbarColor);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.second_close_button {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    color: var(--mainColor);
+}
+
+.sm_search_bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border: 1px solid #373737;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #282828;
+    align-items: center;
+}
+
+.sm_search_bar input {
+    width: 100%;
+    height: 100%;
+    background: #282828;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    color: var(--mainColor);
+}
+
+.sm_search_bar .sm_search_icons_div {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sm_nav_icon_div {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.sm_nav_icon_div_active {
+    background: #000000;
+    border: 1px solid #373737;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.sm_nav_icon_div_active svg path {
+    fill: var(--mainColor);
+}
+
+.sm_nav_icon_div_active p {
+    color: var(--mainColor);
+}
+
+.sm_nav_icon_div i {
+    color: var(--smnavcl);
+}
+.sm_nav_icon_div p {
+    color: var(--smnavcl);
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+/* second navbar */

@@ -1,233 +1,234 @@
 /* search by your */
 .search_by_year_div {
-   width: 100%;
-   border-radius: 7px;
-   border: 1px solid var(--smDark);
-   cursor: pointer;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid var(--smDark);
+    cursor: pointer;
 }
 .search_by_year_div_active {
-   background-color: var(--navCl);
-   color: var(--mainColor);
+    background-color: var(--navCl);
+    color: var(--mainColor);
 }
 .search_by_year_div h5 {
-   margin-bottom: 0;
+    margin-bottom: 0;
 }
 /* search by your */
 
 /* SEARCH BY YEAR-MAKE-MODEL */
 .search_by_make h1 {
-   font-size: 32px;
-   font-weight: 700;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .selection_header_div {
-   width: 100%;
-   border: 1px solid red;
-   padding: 0.9rem;
-   border: 0.808537px solid var(--smDark);
-   border-radius: 4px;
-   cursor: pointer;
+    width: 100%;
+    border: 1px solid red;
+    padding: 0.9rem;
+    border: 0.808537px solid var(--smDark);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .selection_header_div h3 {
-   font-size: 18px;
-   margin-right: 0.8rem;
-   color: var(--gray);
+    font-size: 18px;
+    margin-right: 0.8rem;
+    color: var(--gray);
 }
 
 .selection_header_div h4 {
-   font-size: 17px;
-   color: var(--gray);
-   font-weight: 600;
+    font-size: 17px;
+    color: var(--gray);
+    font-weight: 600;
 }
 
 .selection_div_content {
-   width: 100%;
-   height: 450px;
-   border: 0.808537px solid var(--smDark);
-   border-radius: 4px;
-   border-bottom: 4px solid var(--redButtonCl);
-   /* overflow: scroll; */
-   overflow-x: hidden;
-   position: relative;
+    width: 100%;
+    height: 450px;
+    border: 0.808537px solid var(--smDark);
+    border-radius: 4px;
+    border-bottom: 4px solid var(--redButtonCl);
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    position: relative;
 }
 
 .selection_div_content::-webkit-scrollbar {
-   width: 10px;
+    width: 10px;
 }
 
 /* Handle */
 .selection_div_content::-webkit-scrollbar-thumb {
-   background: var(--scrollBarCl);
-   border-radius: 10px;
+    background: var(--scrollBarCl);
+    border-radius: 10px;
 }
 
 /* Handle on hover */
 .selection_div_content::-webkit-scrollbar-thumb:hover {
-   background: var(--smDark);
+    background: var(--smDark);
 }
 
 .selection_inner_div {
-   width: 100%;
-   padding-top: 0.3rem;
-   padding-bottom: 0.3rem;
-   padding-left: 1rem;
+    width: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 1rem;
 }
 
 .dark_sm_section {
-   background-color: var(--smGray);
+    background-color: var(--smGray);
 }
 
 .dark_section {
-   background-color: var(--darkGray);
+    background-color: var(--darkGray);
 }
 
 .selection_inner_div p {
-   color: var(--smDark);
-   font-size: 16px;
-   margin-bottom: 0;
-   font-weight: 500;
+    color: var(--smDark);
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 500;
 }
 
 .engine_content_div {
-   padding: 0.8rem;
-   border-right: 1px solid var(--smDark);
+    padding: 0.8rem;
+    border-right: 1px solid var(--smDark);
+    height: 100%;
 }
 
 .engine_content_inner_div {
-   background-color: var(--smGray);
+    background-color: var(--smGray);
 }
 
 .engine_content_inner_div_active {
-   background-color: var(--darkGray);
+    background-color: var(--darkGray);
 }
 
 .engine_content_inner_div_active p {
-   color: var(--mainColor);
+    color: var(--mainColor);
 }
 
 .for_adition_resutls h2 {
-   color: var(--smDark);
-   font-size: 20px;
+    color: var(--smDark);
+    font-size: 20px;
 }
 
 .for_adition_resutls a {
-   color: var(--smDark);
+    color: var(--smDark);
 }
 
 .search_year_engline_image_second,
 .search_year_second_engline_image {
-   display: none;
+    display: none;
 }
 
 /* SEARCH BY YEAR-MAKE-MODEL */
 
 /* SEARCH BY YEAR-MAKE-MODEL */
 .search_by_bearings {
-   display: none;
+    display: none;
 }
 /* SEARCH BY YEAR-MAKE-MODEL */
 
 /* SEARCH BY PART NUMBER / INTERCHANGE */
 .by_set_refrence_div h3 {
-   margin-left: 1rem;
-   font-weight: 700;
-   font-size: 22px;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 22px;
 }
 .by_set_refrence_div i {
-   font-size: 30px;
+    font-size: 30px;
 }
 .by_set_refrence_div input {
-   width: 100%;
-   height: 50px;
-   padding: 1rem;
-   border-radius: 4px;
-   border: 1px solid var(--smDark);
-   outline: none;
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--smDark);
+    outline: none;
 }
 .by_set_refrence_div input::placeholder {
-   color: var(--placeholderCl);
-   font-size: 1.2rem;
+    color: var(--placeholderCl);
+    font-size: 1.2rem;
 }
 .search_btn {
-   padding: 0.5rem 1rem;
-   border: none;
-   cursor: pointer;
-   background-color: var(--redButtonCl);
-   color: var(--mainColor);
-   border-radius: 4px;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--redButtonCl);
+    color: var(--mainColor);
+    border-radius: 4px;
 }
 .search_btn img {
-   width: auto;
-   height: 20px;
-   margin-left: 0.4rem;
+    width: auto;
+    height: 20px;
+    margin-left: 0.4rem;
 }
 .part_number_inner_div h3 {
-   font-size: 27px;
-   margin-bottom: 0;
-   font-weight: 600;
+    font-size: 27px;
+    margin-bottom: 0;
+    font-weight: 600;
 }
 .result_div {
-   width: 100%;
-   height: 450px;
-   border: 1px dotted var(--smDark);
-   overflow-x: scroll;
+    width: 100%;
+    height: 450px;
+    border: 1px dotted var(--smDark);
+    overflow-x: scroll;
 }
 
 .result_div_inner {
-   width: 1200px;
+    width: 1200px;
 }
 
 .result_div::-webkit-scrollbar {
-   width: 10px;
-   height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 /* Handle */
 .result_div::-webkit-scrollbar-thumb {
-   background: var(--scrollBarCl);
-   border-radius: 10px;
+    background: var(--scrollBarCl);
+    border-radius: 10px;
 }
 
 /* Handle on hover */
 .result_div::-webkit-scrollbar-thumb:hover {
-   background: var(--smDark);
+    background: var(--smDark);
 }
 
 .result_head_div {
-   display: flex;
-   overflow-x: hidden;
+    display: flex;
+    overflow-x: hidden;
 }
 
 .result_head_div .result_heading_div {
-   width: 100px;
-   border: 1px dotted var(--smDark);
-   /* padding: 1rem 0.5rem; */
-   padding: 12px;
+    width: 100px;
+    border: 1px dotted var(--smDark);
+    /* padding: 1rem 0.5rem; */
+    padding: 12px;
 }
 .result_div_first {
-   width: 400px !important;
-   border: 1px solid red;
+    width: 400px !important;
+    border: 1px solid red;
 }
 .result_head_div .result_heading_div h3 {
-   color: var(--redButtonCl);
-   font-size: 18px;
-   margin-bottom: 0;
-   margin-top: 0.5rem;
+    color: var(--redButtonCl);
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
 }
 
 .result_head_div p {
-   font-size: 13px;
-   margin-bottom: 0;
+    font-size: 13px;
+    margin-bottom: 0;
 }
 /* SEARCH BY PART NUMBER / INTERCHANGE */
 
 /* SEARCH BY BEARINGS SIZE */
 .search_by_bearings select {
-   width: 100%;
-   padding: 0.5rem;
-   border-radius: 5px;
-   font-size: 20px;
-   font-weight: 600;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
 }
 /* SEARCH BY BEARINGS SIZE */

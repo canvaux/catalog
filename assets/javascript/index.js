@@ -12,6 +12,10 @@ const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 const allPreveImageElm = document.querySelector('.image_prev_all');
 const bigPrevImageElm = document.querySelector('.prev_imge');
+const barIconsElm = document.querySelector('.barsIconsElm');
+const secondTopNavBarElem = document.querySelector('.navbar_second_innercontent');
+const secondNavbarCloseButton = document.querySelector('.second_close_button');
+const smNavbarTabIconsELm = document.querySelectorAll('.sm_nav_icon_div');
 
 // removing active class
 const removeActiveCl = function () {
@@ -127,15 +131,17 @@ const grabActiveElm = function () {
     const prevAllImagesDiv = document.querySelectorAll('.image_prev_innner_div');
     prevAllImagesDiv.forEach((el) => {
         el.style.border = 'none';
-        el.style.backgroundColor = 'transparent';
+        el.style.backgroundColor = 'var(--scrollBarCl)';
     });
 };
 
 // close the model (prev image dev) window
-prevImageCloseBtn.addEventListener('click', function () {
-    prevImageDivElm.classList.remove('prve_image_active');
-    grabActiveElm();
-});
+if (prevImageCloseBtn) {
+    prevImageCloseBtn.addEventListener('click', function () {
+        prevImageDivElm.classList.remove('prve_image_active');
+        grabActiveElm();
+    });
+}
 
 const changeimageData = function () {
     let prevImageAC = document.querySelector(`.prevImageSm${targetElmId}`);
@@ -198,5 +204,39 @@ smCardElm.forEach((el) => {
 });
 
 // events
-arrowRight.addEventListener('click', changeimageToRight);
-arrowLeft.addEventListener('click', changeimageToLeft);
+if (arrowRight) {
+    arrowRight.addEventListener('click', changeimageToRight);
+}
+
+if (arrowLeft) {
+    arrowLeft.addEventListener('click', changeimageToLeft);
+}
+
+let height = 600;
+
+// showing the hidden navbar dom elem
+const showTheSecondNavbar = function () {
+    secondTopNavBarElem.style.height = `100%`;
+};
+
+const hideSecondNavbar = function () {
+    secondTopNavBarElem.style.height = '0px';
+};
+
+// show the second navbar
+barIconsElm.addEventListener('click', showTheSecondNavbar);
+secondNavbarCloseButton.addEventListener('click', hideSecondNavbar);
+
+const removeActiveSmCl = function () {
+    for (let i = 0; i < smNavbarTabIconsELm.length; i++) {
+        smNavbarTabIconsELm[i].classList.remove('sm_nav_icon_div_active');
+    }
+};
+
+smNavbarTabIconsELm.forEach((el) => {
+    el.addEventListener('click', function () {
+        removeActiveSmCl();
+
+        this.classList.add('sm_nav_icon_div_active');
+    });
+});
