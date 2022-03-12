@@ -60,9 +60,11 @@ searchTabsCards.forEach((el) => {
         // adding the active class
         el.classList.add('search_by_year_div_active');
         // show and hide the image
-        if (el.classList.contains('search_by_year_div_active')) {
-            firstTab.style.display = 'block';
-            secondTab.style.display = 'none';
+        if (firstTab && secondTab) {
+            if (el.classList.contains('search_by_year_div_active')) {
+                firstTab.style.display = 'block';
+                secondTab.style.display = 'none';
+            }
         }
     });
 });
