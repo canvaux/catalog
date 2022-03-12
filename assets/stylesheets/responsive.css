@@ -35,6 +35,18 @@
     .navbar_second_inner_div p {
         font-size: 15px;
     }
+    .subaru_heading_div img {
+        display: none;
+    }
+    .subaru_heading_div h3 {
+        color: var(--navCl) !important;
+    }
+    .subaru_heading_div {
+        padding: 0;
+    }
+    .tech_data_tabs h2 {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -53,11 +65,23 @@
     .second_navbar {
         display: none;
     }
+    .subaru_section h3 {
+        font-size: 22px;
+    }
+    .tech_data_tabs img {
+        width: 150px;
+    }
+    .tech_data_tabs h2 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 900px) {
     .selection_inner_div p {
         font-size: 13px;
+    }
+    .tech_data_tabs h2 {
+        font-size: 14px;
     }
 }
 
@@ -78,11 +102,20 @@
     .for_adition_resutls h2 {
         font-size: 16px;
     }
+    /* .tech_data_tabs h2 {
+        font-size: 23px;
+    } */
+    .tech_data_tabs h2 {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 600px) {
     .selection_inner_div p {
         font-size: 13px;
+    }
+    .tech_data_tabs h2 {
+        font-size: 17px;
     }
 }
 
@@ -92,6 +125,12 @@
     }
     .search_by_make h1 {
         font-size: 21px;
+    }
+    .subaru_section h3 {
+        font-size: 16px;
+    }
+    .engine_similar_result h2 {
+        font-size: 18px;
     }
 }
 

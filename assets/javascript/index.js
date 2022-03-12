@@ -1,5 +1,6 @@
 'use strict';
 
+// Dom elements
 const searchTabsCards = document.querySelectorAll('.search_by_year_div');
 const engineCliELm = document.querySelectorAll('.engine_cli');
 const tabsContent = document.querySelectorAll('.tabs_content');
@@ -25,8 +26,10 @@ const removeActiveCl = function () {
         if (!el.classList.contains('search_by_year_div_active')) {
             engineCliELm.forEach((el) => {
                 if (el.id % 2 === 0) {
+                    // hide the elem when the id % 2 = 0
                     el.style.display = 'none';
                 } else {
+                    // show the elem when the id % 2 = 1
                     el.style.display = 'block';
                 }
             });
@@ -41,7 +44,6 @@ searchTabsCards.forEach((el) => {
     el.addEventListener('click', function () {
         removeActiveCl();
         let id = this.id;
-
         const target = el.getAttribute('data-target');
 
         tabsContent.forEach((el) => {
@@ -65,6 +67,7 @@ searchTabsCards.forEach((el) => {
     });
 });
 
+// remove all active classes and styles
 const removetabElmActive = function () {
     tabsContnetELm.forEach((el) => {
         el.classList.remove('tech_active');
@@ -74,6 +77,7 @@ const removetabElmActive = function () {
 for (let i = 0; i < tabsContnetELm.length; i++) {
     tabsContnetELm[i].addEventListener('click', function () {
         removetabElmActive();
+
         this.classList.add('tech_active');
         const target = tabsContnetELm[i].getAttribute('data-target');
 
@@ -89,6 +93,7 @@ for (let i = 0; i < tabsContnetELm.length; i++) {
 
 // inser the dom elem
 const insertFunction = function (elem) {
+    // genrate the dome element and inject it into the dom
     const html = `<div class="image_prev_innner_div">
    <img src="${elem.src}" id="${elem.id}" class="prevImageSm${elem.id} prevImage_sm_elm"
        alt="${elem.src}">
