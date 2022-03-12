@@ -59,3 +59,12 @@ html {
 }
 
 /* global classes */
+
+.image_prev_innner_div {
+    margin: 1rem;
+}
+
+.all_sm_iamges {
+    width: 1200px;
+    display: flex;
+}

@@ -74,6 +74,17 @@
     .tech_data_tabs h2 {
         font-size: 20px;
     }
+    .image_prev_all {
+        overflow: scroll;
+    }
+    .image_prev_innner_div {
+        width: auto;
+        height: auto;
+    }
+    .prevImage_sm_elm {
+        width: auto !important;
+        height: 60px !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -82,6 +93,13 @@
     }
     .tech_data_tabs h2 {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .prev_image_div_inner .prev_imge {
+        max-width: 100%;
+        height: 100%;
     }
 }
 
@@ -131,6 +149,16 @@
     }
     .engine_similar_result h2 {
         font-size: 18px;
+    }
+    .prev_close_image {
+        top: -15px !important;
+        right: -15px !important;
+    }
+    .arrow_left {
+        left: -33px;
+    }
+    .arrow_right {
+        right: -37px;
     }
 }
 
