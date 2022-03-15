@@ -17,19 +17,72 @@
     font-size: 30px;
     margin-bottom: 0;
 }
+
+.service_tabs_content h3 {
+    font-size: 33px;
+}
 /* SUBARU 2007-2015 2457CC 2.5 Ltr 99.500 X 79.000MM */
 
 /* tech data tabs */
+.tech_active {
+    color: var(--navCl) !important;
+}
 .tech_data_tabs h2 {
     color: var(--tabSM);
     font-size: 28px;
 }
-.tech_active {
-    color: var(--navCl) !important;
-}
+
 .tabs_options {
     cursor: pointer;
 }
+
+.tech_tab_second {
+    background-color: var(--secondNavbarColor);
+    padding: 1rem;
+    border-radius: 6px;
+    width: 100%;
+    color: var(--mainColor);
+}
+.tech_tab_second option {
+    font-size: 17px;
+}
+.tech_tas_sm {
+    display: none;
+}
+.tech_tabs_sm_cart {
+    width: 100%;
+    padding: 1rem 2rem;
+    /* border-radius: 6px; */
+    transition: all 0.3s ease;
+}
+.tech_tabs_sm_cart_active {
+    border-radius: 8px;
+    background-color: var(--secondNavbarColor);
+}
+.tech_tabs_sm_cart h2 {
+    color: var(--mainColor);
+}
+.tech_tabs_sm_cart i {
+    color: var(--mainColor);
+}
+.tech_tabs_option_div {
+    border-radius: 8px;
+    padding: 0;
+    height: 0;
+}
+
+.tech_tabs_option_div_active {
+    height: auto;
+    transition: all 0.3s ease;
+}
+.tech_tabs_option_div_active div {
+    padding: 1rem 2rem;
+    background-color: var(--secondNavbarColor);
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
 /* tech data tabs */
 
 /* tabs container section */
@@ -38,6 +91,7 @@
     /* height: 800px; */
     border: 1.5px dotted var(--smDark);
     overflow-y: hidden;
+    position: relative;
 }
 
 .tabs_content_main {
@@ -47,6 +101,41 @@
 .tabs_container_inner_div::-webkit-scrollbar {
     width: 10px;
     height: 10px;
+}
+
+.arrow_overlay_div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.arrow_overlay_div img {
+    width: 50px;
+    height: auto;
+    margin-top: 3rem;
+    animation: arrowAnimation 0.8s ease infinite;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        margin-left: 2rem;
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Handle */
@@ -117,6 +206,7 @@
 
 .tabs_eidt_div {
     overflow-y: hidden;
+    position: relative;
 }
 
 .tabs_eidt_div::-webkit-scrollbar {
@@ -250,3 +340,16 @@
 }
 
 /* tabs container section */
+
+.tabs_container_section {
+    position: relative;
+}
+
+.path_div {
+    position: absolute;
+    left: 120px;
+    top: 50px;
+}
+.path_div img {
+    width: 100px;
+}

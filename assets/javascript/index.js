@@ -17,6 +17,27 @@ const barIconsElm = document.querySelector('.barsIconsElm');
 const secondTopNavBarElem = document.querySelector('.navbar_second_innercontent');
 const secondNavbarCloseButton = document.querySelector('.second_close_button');
 const smNavbarTabIconsELm = document.querySelectorAll('.sm_nav_icon_div');
+const tabParentDivElm = document.querySelectorAll('.selection_pr_div');
+const TabOverLyDiv = document.querySelector('.tabs_overlay_div');
+const hideTabContent = document.querySelectorAll('.hide_content');
+const targetELmDark = document.querySelectorAll('.selection_inner_div');
+const tabsSelectRadioElm = document.querySelectorAll('.tabs_select_radio');
+const techTabsSecondElm = document.querySelector('.tech_tab_second');
+const tabsSmCartDivELm = document.querySelector('.tech_tabs_sm_cart');
+const tabsSmCartOptionDivElm = document.querySelector('.tech_tabs_option_div');
+const options = document.querySelectorAll('.ten_option');
+const navigationArrowElm = document.querySelectorAll('.arrow_overlay_div');
+const scrollTabDivElm = document.querySelectorAll('.tabs_container_inner_div');
+const editTabDivElm = document.querySelector('.tabs_eidt_div');
+const productContainerDivElm = document.querySelectorAll('.product_contaner_div');
+
+// global variables
+let height = 600;
+let width;
+let elmDiv;
+let num = 0;
+let prevSmCardImage;
+let targetElmId;
 
 // removing active class
 const removeActiveCl = function () {
@@ -43,6 +64,8 @@ const removeActiveCl = function () {
 searchTabsCards.forEach((el) => {
     el.addEventListener('click', function () {
         removeActiveCl();
+
+        // grab the target id for finding the current targer elm from the dome
         let id = this.id;
         const target = el.getAttribute('data-target');
 
@@ -62,6 +85,7 @@ searchTabsCards.forEach((el) => {
         // show and hide the image
         if (firstTab && secondTab) {
             if (el.classList.contains('search_by_year_div_active')) {
+                // togal the images with style property
                 firstTab.style.display = 'block';
                 secondTab.style.display = 'none';
             }
@@ -81,6 +105,8 @@ for (let i = 0; i < tabsContnetELm.length; i++) {
         removetabElmActive();
 
         this.classList.add('tech_active');
+
+        // grab the elem from the dome and find the element using the target element target attribute
         const target = tabsContnetELm[i].getAttribute('data-target');
 
         tabsContainerSectionELm.forEach((el) => {
@@ -95,22 +121,22 @@ for (let i = 0; i < tabsContnetELm.length; i++) {
 
 // inser the dom elem
 const insertFunction = function (elem) {
-    // genrate the dome element and inject it into the dom
-    const html = `<div class="image_prev_innner_div">
-   <img src="${elem.src}" id="${elem.id}" class="prevImageSm${elem.id} prevImage_sm_elm"
-       alt="${elem.src}">
-   </div>`;
+    // genrate the dom element and inject it into the dom
+    const html = `
+    <div class="image_prev_innner_div">
+        <img src="${elem.src}" id="${elem.id}" class="prevImageSm${elem.id} prevImage_sm_elm"
+        alt="${elem.src}">
+    </div>`;
 
     allPreveImageElm.insertAdjacentHTML('beforeend', html);
 };
 
-let num = 0;
-let prevSmCardImage;
-let targetElmId;
-
+// image preview and the next function when the user click on the next button the change image src by incress the number
 prevImage.forEach((el) => {
     num++;
     el.setAttribute('id', num);
+
+    // genrate the new element every single time when the user click on the next button
     insertFunction(el);
 
     // when the user click on the any image then show the previmage div
@@ -219,14 +245,14 @@ if (arrowLeft) {
     arrowLeft.addEventListener('click', changeimageToLeft);
 }
 
-let height = 600;
-
 // showing the hidden navbar dom elem
 const showTheSecondNavbar = function () {
+    // change the navbar style when the user click on the bars button then change the heigth of the navbar
     secondTopNavBarElem.style.height = `100%`;
 };
 
 const hideSecondNavbar = function () {
+    // reset the navbar height proprty
     secondTopNavBarElem.style.height = '0px';
 };
 
@@ -234,6 +260,7 @@ const hideSecondNavbar = function () {
 barIconsElm.addEventListener('click', showTheSecondNavbar);
 secondNavbarCloseButton.addEventListener('click', hideSecondNavbar);
 
+// navbar aciver and hide function
 const removeActiveSmCl = function () {
     for (let i = 0; i < smNavbarTabIconsELm.length; i++) {
         smNavbarTabIconsELm[i].classList.remove('sm_nav_icon_div_active');
@@ -247,3 +274,198 @@ smNavbarTabIconsELm.forEach((el) => {
         this.classList.add('sm_nav_icon_div_active');
     });
 });
+
+// adding style into the dom element
+const tabElmStyle = function (elm) {
+    // apply some style in mobile view in tabs contents
+    elm.style.display = 'block';
+    elm.style.zIndex = '300';
+    elm.style.position = 'absolute';
+    elm.style.top = '50%';
+    elm.style.left = '50%';
+    elm.style.transform = 'translate(-50%, -90%)';
+};
+
+window.addEventListener('resize', function () {
+    width = this.window.innerWidth;
+
+    if (TabOverLyDiv && hideTabContent && tabsSelectRadioElm && targetELmDark) {
+        if (width > 600) {
+            TabOverLyDiv.classList.remove('tabs_overlay_div_active');
+
+            hideTabContent.forEach((el) => {
+                el.style.display = 'block';
+                el.style.zIndex = '300';
+                el.style.position = 'relative';
+                el.style.top = '0';
+                el.style.left = '0';
+                el.style.transform = 'none';
+            });
+
+            tabsSelectRadioElm.forEach((el) => {
+                el.style.display = 'none';
+            });
+        } else {
+            hideTabContent.forEach((el) => {
+                el.style.display = 'none';
+            });
+
+            targetELmDark.forEach((el) => {
+                const child = el.childNodes;
+                child[1].classList.remove('darkcolor');
+            });
+        }
+    }
+});
+
+if (width === undefined) {
+    // if the width is not set then set the width = window current widht
+    width = window.innerWidth;
+}
+
+const showSelectedElm = function () {
+    const elmValue = this.parentNode.childNodes[1];
+
+    // user selected radio button value ---------------------------
+    console.log(elmValue);
+    // user selected radio button value ---------------------------
+};
+
+// mobile view tabs component when the screen viewport is less then 600px then the tabse view and style is changed like card is the if you want to change the card property then change the property from the tabElmStyle funtion.
+if (tabParentDivElm) {
+    tabParentDivElm.forEach((el) => {
+        el.addEventListener('click', function () {
+            if (width <= 600) {
+                if (tabsSelectRadioElm) {
+                    tabsSelectRadioElm.forEach((el) => {
+                        el.style.display = 'block';
+
+                        el.addEventListener('click', showSelectedElm);
+                    });
+                }
+
+                // show the overlay div when the user click the any tab and if the width is less then 600
+                TabOverLyDiv.classList.add('tabs_overlay_div_active');
+
+                if (TabOverLyDiv.classList.contains('tabs_overlay_div_active')) {
+                    // document.body.style.overflowY = 'hidden';
+
+                    const id = this.id;
+
+                    // grab the dom elem useing the target id
+                    elmDiv = document.querySelector(`#${id}_content`);
+
+                    // change the tabs style
+                    tabElmStyle(elmDiv);
+
+                    // loop over the card content for adding style in one single time
+                    targetELmDark.forEach((event, i) => {
+                        const child = event.childNodes;
+
+                        // grab the first child from the tabs by using the array property and add the class into that element.
+                        child[1].classList.add('darkcolor');
+
+                        // if the element index % 2 = 0 then the change the style and some color and backgound color
+                        if (i % 2 == 0) {
+                            event.style.backgroundColor = '#e1e1e1';
+                        } else {
+                            event.style.backgroundColor = '#fff';
+                        }
+                    });
+                }
+            } else {
+                return;
+            }
+        });
+    });
+
+    window.addEventListener('click', function (e) {
+        const target = e.target;
+        if (target.classList.contains('tabs_overlay_div_active')) {
+            // reset all setting when the user clikc on the overlay div without check any option
+
+            // this.document.body.style.overflowY = 'scroll';
+            TabOverLyDiv.classList.remove('tabs_overlay_div_active');
+            elmDiv.style.display = 'none';
+        }
+    });
+}
+
+// open the close tab function
+let openTab = false;
+
+if (tabsSmCartDivELm) {
+    tabsSmCartDivELm.addEventListener('click', function () {
+        if (!openTab) {
+            openTab = true;
+            tabsSmCartOptionDivElm.classList.add('tech_tabs_option_div_active');
+        } else {
+            openTab = false;
+            tabsSmCartOptionDivElm.classList.remove('tech_tabs_option_div_active');
+        }
+    });
+
+    options.forEach((elm) => {
+        elm.addEventListener('click', function () {
+            elm.style.color = '#fff';
+
+            const topTabChildElm = tabsSmCartDivELm.childNodes;
+            // grab the first child value and store it
+            const tabValue = topTabChildElm[1].textContent;
+            let tabAttribute = topTabChildElm[1].getAttribute('data-target');
+
+            // grab all child notes to change the style and grab the inner text value from the dom elem
+            const chilElm = topTabChildElm;
+
+            // if the user click on any option button and div the change the top tab value and store it, and change value the clicked elem and assign the new value
+            let targetElmChildElm = this.childNodes;
+            let targeAttribute = targetElmChildElm[1].getAttribute('data-target');
+
+            chilElm[1].textContent = targetElmChildElm[1].textContent;
+
+            targetElmChildElm[1].textContent = tabValue;
+
+            // swipe the attribute when the user click on some option div
+            topTabChildElm[1].setAttribute('data-target', targeAttribute);
+            targetElmChildElm[1].setAttribute('data-target', tabAttribute);
+
+            // every time when the user click on the tab option then click the tab and remove the class from the tab
+            openTab = false;
+            tabsSmCartOptionDivElm.classList.remove('tech_tabs_option_div_active');
+        });
+    });
+}
+
+// navigation arrow elem
+const removerNavigationArrow = function (el) {
+    el.addEventListener('scroll', function (e) {
+        let scrollLeft = this.scrollLeft;
+
+        if (scrollLeft >= 10) {
+            navigationArrowElm.forEach((event) => {
+                event.style.display = 'none';
+            });
+        }
+    });
+};
+
+// when the user scroll the table then remove the arrow navigation
+const removeArroAnimation = function () {
+    if (scrollTabDivElm) {
+        scrollTabDivElm.forEach((el) => {
+            removerNavigationArrow(el);
+        });
+    }
+
+    if (editTabDivElm) {
+        removerNavigationArrow(editTabDivElm);
+    }
+
+    if (productContainerDivElm) {
+        productContainerDivElm.forEach((el) => {
+            removerNavigationArrow(el);
+        });
+    }
+};
+
+removeArroAnimation();

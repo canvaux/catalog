@@ -131,6 +131,33 @@
     }
 }
 
+@media (max-width: 651px) {
+    .tech_tabs {
+        display: block;
+    }
+    .tech_tas_sm {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .tech_tabs {
+        display: none;
+    }
+    .tech_tas_sm {
+        display: block;
+    }
+}
+
+@media (max-width: 601px) {
+    .hide_content {
+        display: block;
+    }
+    .selection_pd_contnet {
+        position: relative;
+    }
+}
+
 @media (max-width: 600px) {
     .selection_inner_div p {
         font-size: 13px;
@@ -138,6 +165,24 @@
     .tech_data_tabs h2 {
         font-size: 17px;
     }
+    .selection_div_content::-webkit-scrollbar {
+        width: 2px;
+    }
+    .tech_active {
+        color: var(--mainColor) !important;
+    }
+    .arrow_overlay_div {
+        opacity: 1;
+    }
+    /* .hide_content {
+        display: none !important;
+    } */
+    /* .selection_pd_contnet {
+        position: absolute;
+        left: 70px;
+        top: 56px;
+        z-index: 999;
+    } */
 }
 
 @media (max-width: 500px) {

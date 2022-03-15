@@ -1,9 +1,13 @@
 .product_contaner_div .result_div_inner {
     width: 1575px;
+    position: relative;
 }
 .product_contaner_div .result_div_first {
     width: 606px !important;
 }
 .product_contaner_div .result_head_div .result_heading_div {
     width: 120px;
+}
+.result_div {
+    position: relative;
 }

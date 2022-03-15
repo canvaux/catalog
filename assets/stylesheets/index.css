@@ -20,6 +20,10 @@
     font-weight: 700;
 }
 
+.select_top_div {
+    position: relative;
+}
+
 .selection_header_div {
     width: 100%;
     border: 1px solid red;
@@ -27,6 +31,7 @@
     border: 0.808537px solid var(--smDark);
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
 }
 
 .selection_header_div h3 {
@@ -50,6 +55,11 @@
     /* overflow: scroll; */
     overflow-x: hidden;
     position: relative;
+    background-color: var(--mainColor);
+}
+
+.selection_div a {
+    text-decoration: none;
 }
 
 .selection_div_content::-webkit-scrollbar {
@@ -66,6 +76,9 @@
 .selection_div_content::-webkit-scrollbar-thumb:hover {
     background: var(--smDark);
 }
+.tabs_select_radio {
+    display: none;
+}
 
 .selection_inner_div {
     width: 100%;
@@ -79,7 +92,8 @@
 }
 
 .dark_section {
-    background-color: var(--darkGray);
+    /* background-color: var(--darkGray); */
+    color: var(--smDark);
 }
 
 .selection_inner_div p {
@@ -99,13 +113,13 @@
     background-color: var(--smGray);
 }
 
-.engine_content_inner_div_active {
+/* .engine_content_inner_div_active {
     background-color: var(--darkGray);
 }
 
 .engine_content_inner_div_active p {
     color: var(--mainColor);
-}
+} */
 
 .for_adition_resutls h2 {
     color: var(--smDark);
