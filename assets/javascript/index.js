@@ -30,6 +30,10 @@ const navigationArrowElm = document.querySelectorAll('.arrow_overlay_div');
 const scrollTabDivElm = document.querySelectorAll('.tabs_container_inner_div');
 const editTabDivElm = document.querySelector('.tabs_eidt_div');
 const productContainerDivElm = document.querySelectorAll('.product_contaner_div');
+const resultDivElm = document.querySelectorAll('.result_div');
+const searchSmtabsElm = document.querySelector('.searchBytabs_second');
+const searchSmTopNavbarElm = document.querySelector('.searchBy_sm_tabs');
+const searchSmTabCmElm = document.querySelectorAll('.searchBy_sm_tabs_second');
 
 // global variables
 let height = 600;
@@ -38,6 +42,69 @@ let elmDiv;
 let num = 0;
 let prevSmCardImage;
 let targetElmId;
+let showSmTabs;
+
+// home page tabs when the screen
+if (searchSmTopNavbarElm) {
+    searchSmTopNavbarElm.addEventListener('click', function () {
+        if (!showSmTabs) {
+            showSmTabs = true;
+
+            searchSmtabsElm.classList.add('searchBytabs_second_active');
+        } else {
+            showSmTabs = false;
+
+            searchSmtabsElm.classList.remove('searchBytabs_second_active');
+        }
+    });
+
+    // remover all preview active tabs
+    const removeAllPrevTabs = function () {
+        tabsContent.forEach((el) => {
+            el.style.display = 'none';
+        });
+    };
+
+    // get the mobile top navbar elem for changing the style, text and images src
+    let searchSmChElm = searchSmTopNavbarElm.childNodes[1].childNodes[1].childNodes;
+
+    // grab the first and thred elem from the array [1] -> image, [3] -> paragraph
+    let searchSmSrc = searchSmChElm[1];
+    let searchSmTextContent = searchSmChElm[3];
+
+    searchSmTabCmElm.forEach((el) => {
+        el.addEventListener('click', function () {
+            removeAllPrevTabs();
+
+            // grab the selected element data..
+            let searchSmELmSrc = searchSmSrc.getAttribute('src');
+            let searchSmElmTextContent = searchSmTextContent.textContent;
+            let targetElmAttrubute = this.getAttribute('data-target');
+            let topNavDataTarget = searchSmTopNavbarElm.getAttribute('data-target');
+
+            // get the all child from the target element
+            const chidlEm = this.childNodes;
+            let chidlELmAttribute = this.getAttribute('data-target');
+            this.setAttribute('data-target', topNavDataTarget);
+            searchSmTopNavbarElm.setAttribute('data-target', chidlELmAttribute);
+
+            let targetElmChildNode = chidlEm[1].childNodes[1];
+            let src = targetElmChildNode.childNodes[1];
+            let targetTextContent = targetElmChildNode.childNodes[3];
+
+            searchSmSrc.src = src.getAttribute('src');
+            searchSmTextContent.textContent = targetTextContent.textContent;
+            src.setAttribute('src', searchSmELmSrc);
+            targetTextContent.textContent = searchSmElmTextContent;
+
+            // changing the tabs style and rest the tabs open settings.
+            const activeTabDivElm = document.querySelector(`#${targetElmAttrubute}`);
+            activeTabDivElm.style.display = 'block';
+            searchSmtabsElm.classList.remove('searchBytabs_second_active');
+            showSmTabs = false;
+        });
+    });
+}
 
 // removing active class
 const removeActiveCl = function () {
@@ -331,6 +398,19 @@ const showSelectedElm = function () {
     // user selected radio button value ---------------------------
 };
 
+// add the active class in the target element. and check the radio button also
+// const removerPrevActive = function () {
+//     targetELmDark.forEach((el) => {
+//         el.classList.remove('activeTargetElm');
+//     });
+// };
+
+// const userCheckTargetElm = function (event) {
+//     removerPrevActive();
+
+//     this.classList.add('activeTargetElm');
+// };
+
 // mobile view tabs component when the screen viewport is less then 600px then the tabse view and style is changed like card is the if you want to change the card property then change the property from the tabElmStyle funtion.
 if (tabParentDivElm) {
     tabParentDivElm.forEach((el) => {
@@ -361,6 +441,8 @@ if (tabParentDivElm) {
                     // loop over the card content for adding style in one single time
                     targetELmDark.forEach((event, i) => {
                         const child = event.childNodes;
+
+                        // event.addEventListener('click', userCheckTargetElm);
 
                         // grab the first child from the tabs by using the array property and add the class into that element.
                         child[1].classList.add('darkcolor');
@@ -463,6 +545,12 @@ const removeArroAnimation = function () {
 
     if (productContainerDivElm) {
         productContainerDivElm.forEach((el) => {
+            removerNavigationArrow(el);
+        });
+    }
+
+    if (resultDivElm) {
+        resultDivElm.forEach((el) => {
             removerNavigationArrow(el);
         });
     }

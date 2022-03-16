@@ -14,6 +14,47 @@
 }
 /* search by your */
 
+/* search by sm tabs */
+
+.searchBy_sm_tabs {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondNavbarColor);
+    border-radius: 8px;
+}
+.searchBy_sm_tabs i {
+    color: var(--mainColor);
+}
+.searchBy_sm_tabs h5 {
+    color: var(--mainColor);
+    font-size: 12px;
+}
+.searchBytabs_second {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.searchBytabs_second_active {
+    height: auto;
+    transition: all 0.3s ease;
+}
+.searchBy_sm_tabs_second {
+    background-color: var(--secondNavbarColor);
+    padding: 1rem;
+    border-radius: 8px;
+}
+.searchBy_sm_tabs_second h5 {
+    color: var(--mainColor);
+}
+.searchBy_sm_tabs_second h5 {
+    font-size: 12px;
+}
+.sm_tabs_div {
+    display: none;
+}
+/* search by sm tabs */
+
 /* SEARCH BY YEAR-MAKE-MODEL */
 .search_by_make h1 {
     font-size: 32px;
@@ -56,6 +97,16 @@
     overflow-x: hidden;
     position: relative;
     background-color: var(--mainColor);
+}
+
+.selection_div_content > div:nth-child(odd) {
+    background-color: var(--scrollBarCl);
+}
+.selection_div_content > div:nth-child(even) {
+    background-color: var(--mainColor);
+}
+.border_bottom {
+    border-bottom: 1px solid var(--smDark);
 }
 
 .selection_div a {
@@ -111,6 +162,14 @@
 
 .engine_content_inner_div {
     background-color: var(--smGray);
+}
+
+.activeTargetElm {
+    background-color: var(--smDark) !important;
+}
+
+.activeTargetElm p {
+    color: var(--mainColor) !important;
 }
 
 /* .engine_content_inner_div_active {
@@ -187,6 +246,7 @@
     height: 450px;
     border: 1px dotted var(--smDark);
     overflow-x: scroll;
+    position: relative;
 }
 
 .result_div_inner {
